@@ -1,0 +1,20 @@
+{
+  "name": "node-usb-example-electron",
+  "version": "1.0.0",
+  "description": "Example Electron application for node-usb",
+  "author": "Rob Moran <thegecko@github.com>",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "prepare": "yarn rebuild",
+    "start": "electron .",
+    "rebuild": "electron-rebuild"
+  },
+  "devDependencies": {
+    "electron": "^13.0.0",
+    "electron-rebuild": "^3.2.2"
+  },
+  "dependencies": {
+    "usb": "1.7.2"
+  }
+}
