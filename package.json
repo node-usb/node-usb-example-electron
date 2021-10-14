@@ -6,15 +6,12 @@
   "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "prepare": "yarn rebuild",
-    "start": "electron .",
-    "rebuild": "electron-rebuild"
+    "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^13.0.0",
-    "electron-rebuild": "^3.2.2"
+    "electron": "^13.0.0"
   },
   "dependencies": {
-    "usb": "1.7.2"
+    "usb": "1.8.0"
   }
 }
