@@ -9,9 +9,9 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^13.0.0"
+    "electron": "^15.0.0"
   },
   "dependencies": {
-    "usb": "1.8.0"
+    "usb": "1.9.0"
   }
 }
