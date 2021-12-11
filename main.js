@@ -10,9 +10,15 @@ const webusb = new usb.WebUSB({
 });
 
 const showDevices = async () => {
-    const devices = await webusb.getDevices();
-    const text = devices.map(d => `${d.vendorId}\t${d.productId}\t${d.serialNumber || '<no serial>'}`);
-    text.unshift('VID\tPID\tSerial\n-------------------------------------');
+    // Using WebUSB
+    // const devices = await webusb.getDevices();
+    // const text = devices.map(d => `${d.vendorId}\t${d.productId}\t${d.serialNumber || '<no serial>'}`);
+    // text.unshift('VID\tPID\tSerial\n-------------------------------------');
+
+    // Using legacy devices
+    const devices = usb.getDeviceList();
+    const text = devices.map(d => `${d.deviceDescriptor.idVendor}\t${d.deviceDescriptor.idProduct}`);
+    text.unshift('VID\tPID\n-------------------------------------');
 
     windows.forEach(win => {
         if (win) {
@@ -45,8 +51,13 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-    webusb.addEventListener('connect', showDevices);
-    webusb.addEventListener('disconnect', showDevices);
+    // Using WebUSB
+    // webusb.addEventListener('connect', showDevices);
+    // webusb.addEventListener('disconnect', showDevices);
+
+    // Using legacy devices
+    usb.usb.on('attach', showDevices);
+    usb.usb.on('detach', showDevices);
 
     createWindow();
 
@@ -61,8 +72,14 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-    webusb.addEventListener('connect', showDevices);
-    webusb.addEventListener('disconnect', showDevices);
+    // Using WebUSB
+    // webusb.addEventListener('connect', showDevices);
+    // webusb.addEventListener('disconnect', showDevices);
+
+    // Using legacy devices
+    usb.usb.off('attach', showDevices);
+    usb.usb.off('detach', showDevices);
+
     app.quit();
 });
 
