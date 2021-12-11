@@ -6,12 +6,13 @@
   "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "clean": "git clean -dfx"
   },
   "devDependencies": {
-    "electron": "^15.0.0"
+    "electron": "^16.0.4"
   },
   "dependencies": {
-    "usb": "1.9.0"
+    "usb": "^2.0.1"
   }
 }
