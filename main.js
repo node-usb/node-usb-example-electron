@@ -1,9 +1,9 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
 const usb = require('usb');
 
-let windows = []
+let windows = [];
 
 const webusb = new usb.WebUSB({
     allowAllDevices: true
@@ -19,9 +19,9 @@ const showDevices = async () => {
             win.webContents.send('devices', text.join('\n'));
         }
     });
-}
+};
 
-function createWindow() {
+const createWindow = () => {
     // Create the browser window.
     const win = new BrowserWindow({
         width: 800,
@@ -39,7 +39,7 @@ function createWindow() {
 
     windows.push(win);
     showDevices();
-}
+};
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
