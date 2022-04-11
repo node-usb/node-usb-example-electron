@@ -35,10 +35,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.33.tgz#011ee28e38dc7aee1be032ceadf6332a0ab15b12"
   integrity sha512-noEeJ06zbn3lOh4gqe2v7NMGS33jrulfNqYFDjjEbhpDEHR5VTxgYNQSBqBlJIsBJW3uEYDgD6kvMnrrhGzq8g==
 
-"@types/w3c-web-usb@^1.0.4":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.5.tgz#90284d17f35de981670c85d29053ae8b88fa5543"
-  integrity sha512-dYolx2XWesl1TMu+1BjtjU6eC6c2zZ2VDKhjU4f/mtR3+UBfMW6h1tPCQt7leY5Y8JBg0Fe/mMnoDMkPPNX9sw==
+"@types/w3c-web-usb@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.6.tgz#5d8560d0d9f585ffc80865bc773db7bc975b680c"
+  integrity sha512-cSjhgrr8g4KbPnnijAr/KJDNKa/bBa+ixYkywFRvrhvi9n1WEl7yYbtRyzE6jqNQiSxxJxoAW3STaOQwJHndaw==
 
 boolean@^3.0.1:
   version "3.1.4"
@@ -558,12 +558,12 @@ url-parse-lax@^3.0.0:
   dependencies:
     prepend-http "^2.0.0"
 
-usb@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/usb/-/usb-2.1.0.tgz#cb55f7a89d685462f959a2a7702845e1b3a948c6"
-  integrity sha512-aPpaH+o/yzmlWIK4AiERbPLPjONOuF0V2sHXMflbDypLaRwTCY8Hy34qODTraTmLXXsm+T9BwgA/P70wPscA+A==
+usb@^2.1.3:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/usb/-/usb-2.3.1.tgz#6dca3b4308dbe22ef012d44fd55040ba240cbd00"
+  integrity sha512-UdlcYC5rFhjFi2/NFfCz1HPoo5bQnDiB9916pg61gMyapoPgSNicGHdpQwia2UeVilDW/LZhUMiwOv5sYOkI9Q==
   dependencies:
-    "@types/w3c-web-usb" "^1.0.4"
+    "@types/w3c-web-usb" "1.0.6"
     node-addon-api "^4.2.0"
     node-gyp-build "^4.3.0"
 
