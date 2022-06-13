@@ -10,7 +10,7 @@
     "clean": "git clean -dfx"
   },
   "devDependencies": {
-    "electron": "^16.0.4"
+    "electron": "^19.0.0"
   },
   "dependencies": {
     "usb": "^2.4.2"
