@@ -4,11 +4,11 @@ Example Electron application for node-usb
 ## Installation
 
 ```bash
-yarn
+npm i
 ```
 
 ## Running
 
 ```bash
-yarn start
+npm run start
 ```
